@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+
+<vertical display_name="PS1 Check">
+
+<html display_name="Intro">
+    <p>
+To check your answers put them in the appropriate box and click the 'Check' button. The checker can do arithmetic. So, 3^2, 5/3 and 3*4 are okay. If you give decimal answers, give them to at least 3 decimal places.
+	</p>
+	<p>
+Note: some questions ask for a formula. For the checker we ask you to plug a value into the formula. For your pset you still need to give the whole formula.
+	</p>
+</html>	
+
+<problem showanswer="closed" rerandomize="never" weight="0" display_name="Poker Hands">
+	<text>
+		<p>1. (10 pts.) <strong>Poker Hands.</strong></p>
+		<p>After one-pair, the next most common hands are two-pair and three-of-a-kind:</p>
+		<ul type="none">
+			<li><i>Two-pair:</i> Two cards have one rank, two cards have another rank, and the remaining card has a third rank. e.g. {<span style="color:red">2♥</span>, 2♠, <span style="color:red">5♥</span>, 5♣, <span style="color:red">K♦</span>}<p>Probability of two-pair:</p>
+				<numericalresponse answer=".047539">
+					<textline>
+						<responseparam type="tolerance" default="0.001"/>
+					</textline>
+				</numericalresponse>
+			</li>
+			<li><i>Three-of-a-kind:</i> Three cards have one rank and the remaining two cards have two other ranks. e.g. {<span style="color:red">2♥</span>, 2♠, 2♣, 5♣, <span style="color:red">K♦</span>}
+				<p>Probability of three-of-a-kind:</p>
+				<numericalresponse answer=".021128">
+					<textline>
+						<responseparam type="tolerance" default="0.001"/>
+					</textline>
+				</numericalresponse>
+			</li>
+		</ul>
+		<p>
+			Calculate the probability of each type of hand. Which is more likely?<br />
+			<multiplechoiceresponse>
+				<choicegroup direction="vertical">
+					<choice correct="true" name="1">
+						<text> Two-pairs</text>
+					</choice>
+					<choice correct="false" name="2">
+						<text> Three-of-a-kind</text>
+					</choice>
+				</choicegroup>
+			</multiplechoiceresponse>
+		</p>
+	</text>
+</problem>
+
+<problem showanswer="closed" rerandomize="never" weight="0" display_name="Non-transitive dice">
+ <text>
+	<p>    
+<p>2. (10 pts.) <strong>Non-transitive dice.</strong><br />In class we worked with non-transitive dice:</p>
+<table style="width:350px">
+         <tr>
+            <td><span style="color:red">Red: 333336;</span></td>
+            <td><span style="color:limegreen">Green: 144444;</span></td>
+            <td>White: 222555.</td>
+         </tr>
+    </table>
+<p>Finish making your non-transitive dice.</p>
+<ol type="a">
+    <li>In class you found the probability that red beats white. Find the probability that white beats green and the probability that green beats red.<br />P(white beats green):<br /><numericalresponse answer="0.58333"><textline><responseparam type="tolerance" default="0.01"/></textline></numericalresponse><br />P(green beats red):<br /><numericalresponse answer="0.69444"><textline><responseparam type="tolerance" default="0.01"/></textline></numericalresponse><br /></li>
+<p>Can you line the dice up in order from best to worst? (Hint: this is why these are called ‘non-transitive’.)</p>
+    <li>Suppose you roll two white dice against two red dice. What is the probability that the sum of the white dice is greater than the sum of the red dice?<br />P(sum on white > sum on red):<br /><numericalresponse answer="0.59028"><textline><responseparam type="tolerance" default="0.001"/></textline></numericalresponse></li>
+</ol>
+<p>For hints on this problem and ways to make money with your dice, watch at least the first six minutes of the following video.
+<br />    <a href="http://www.youtube.com/watch?v=zWUrwhaqq_c">http://www.youtube.com/watch?v=zWUrwhaqq_c</a><br />
+Here a tree is used to organize the calculation rather than a table. We will discuss this method in Week 2.</p>
+	</p>
+ </text>
+</problem>
+
+
+<problem showanswer="closed" rerandomize="never" weight="0" display_name="Birthdays: counting and simulation">
+ <text>
+	<p>
+<p>3. (20 pts.) <strong>Birthdays: counting and simulation.</strong><br />Ignoring leap days, the days of the year can be numbered 1 to 365. Assume that birthdays are equally likely to fall on any day of the year. Consider a group of <i>n</i> people, of which you are not a member. An element of the sample space Ω will be a sequence of <i>n</i> birthdays (one for each person).</p>
+<ol type="a">
+    <li>Define the probability function <i>P</i> for Ω..<br />Probability function. Using your answer for <i>n</i>=5, what is the probability the sequence of birthdays is 1, 2, 1, 2, 1?<br /><numericalresponse answer="0.00"><textline><responseparam type="tolerance" default="0.001"/></textline></numericalresponse></li>
+    <li>Consider the following events:
+        <ol type="A">
+          <li>“someone in the group shares your birthday”</li>
+          <li>“some two people in the group share a birthday”</li>
+          <li>“some two people in the group share a birthday”</li>
+        </ol>
+    </li>
+<p><em>No online check.</em><br />Carefully describe the subset of Ω that corresponds to each event.</p>
+     <li>Find an exact formula for <i>P(A)</i>. What is the smallest <i>n</i> such that <i>P(A)</i> > .5?<br />Exact formula for <i>P(A)</i>. Give your answer when <i>n</i>=30<br /><numericalresponse answer="0.079009"><textline><responseparam type="tolerance" default="0.001"/></textline></numericalresponse><br />Smallest <i>n</i> such that <i>P(A)</i> > .5?<br /><numericalresponse answer="253"><textline><responseparam type="tolerance" default="0.01"/></textline></numericalresponse></li>
+     <li>Justify why <i>n</i> is greater than <sup>365</sup>⁄<sub>2</sub> without doing any computation. (We are looking for a short answer giving a heuristic sense of why this is so.)<br />Justify why <i>n</i> > <sup>365</sup>⁄<sub>2</sub>.</li><br /><em>No online check.</em>
+     <li>Use <i>R</i> simulation to estimate the smallest <i>n</i> for which <i>P(B)</i> > .9. For these simulations, let the number of trials be 10000.<br />Smallest <i>n</i> where <i>P(B)</i> > .9.<br /><numericalresponse answer="41"><textline><responseparam type="tolerance" default="0.01"/></textline></numericalresponse></li>
+<p>For this value of <i>n</i>, repeat the simulation a few times to verify that it always gives similar results.<br />Using 10000 trials you saw very little variation in the estimate of <i>P(B)</i>. Try this again using 30 trials and verify that the estimated probabilities are much more variable.</p>
+     <li>Find an exact formula for <i>P(B)</i>.<br />Exact formula for <i>P(B)</i>. Give the value when <i>n</i>=5.<br /><numericalresponse answer="0.027136"><textline><responseparam type="tolerance" default="0.001"/></textline></numericalresponse></li>
+     <li>Use <i>R</i> simulation to estimate the smallest <i>n</i> for which <i>P(C)</i> > .5. Again use 10000 trials. You will find that two values of <i>n</i> are equally plausible values. You may pick either one for your answer.<br />Smallest <i>n</i> for which <i>P(C)</i> > .5.<br /><numericalresponse answer="87.5"><textline><responseparam type="tolerance" default="0.8"/></textline></numericalresponse></li>
+<p>Note that it is much harder to find an exact formula for <i>P(C)</i>, so simulation is especially handy.</p>
+     <li>In real life, some birthdays are more common than others. Click on the first graph here to see the data:<br /><a href="http://chmullig.com/2012/06/births-by-day-of-year/">http://chmullig.com/2012/06/births-by-day-of-year/</a><br />As you should read, the author simulated the birthday problem using the real-life probabilities of different birthdays. He found that, for a fixed number of people, the probability of a match is <em>slightly higher</em> in real-life than in the equal-probability model above. Why is this plausible? Hint: Lucky Larry. (Again, we want a short answer.)<br /><em>No online check.</em></li>
+</ol>
+	</p>
+ </text>
+</problem>
+
+</vertical>
